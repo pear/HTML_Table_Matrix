@@ -27,12 +27,12 @@
     </maintainers>
 
     <release>
-        <version>1.0.3</version>
-        <date>2004-04-27</date>
+        <version>1.0.4</version>
+        <date>2004-04-28</date>
         <state>stable</state>
         <license>PHP License v3.0</license>
         <notes><![CDATA[
-            * Add description to package.xml.
+            * Fix missing PHP open tag in example code.
         ]]></notes>
         <filelist>
             <dir name="/" baseinstalldir="HTML/Table">
@@ -52,6 +52,30 @@
     </release>
     
     <changelog>
+        <release>
+            <version>1.0.3</version>
+            <date>2004-04-27</date>
+            <state>stable</state>
+            <license>PHP License v3.0</license>
+            <notes><![CDATA[
+                * Add description to package.xml.
+            ]]></notes>
+            <filelist>
+                <dir name="/" baseinstalldir="HTML/Table">
+                    <file role="php">Matrix.php</file>
+                    <dir name="Matrix">
+                        <file role="php">Filler.php</file>
+                        <dir name="Filler">
+                            <file role="php">LRTB.php</file>
+                            <file role="php">RLTB.php</file>
+                        </dir>
+                    </dir>
+                </dir>
+                <dir name="examples">
+                    <file role="php">HTML_Table_Matrix_example.php</file>
+                </dir>
+            </filelist>
+        </release>
         <release>
             <version>1.0.2</version>
             <date>2004-04-19</date>

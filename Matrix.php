@@ -236,7 +236,7 @@ class HTML_Table_Matrix extends HTML_Table {
         $this->_calculateSize();
         reset($this->_data);
         $size = $this->_getTableSize();
-        for($i = 0; $i < $size; $i++) {
+        for($i = $index = 0; $i < $size; $i++) {
             list($row, $col) = $this->_filler->next($index);
             $this->_fillCell($row, $col);
             $index++;

@@ -27,13 +27,13 @@
     </maintainers>
 
     <release>
-        <version>1.0.6</version>
-        <date>2004-08-07</date>
+        <version>1.0.7</version>
+        <date>2005-02-07</date>
         <state>stable</state>
         <license>PHP License v3.0</license>
         <notes><![CDATA[
-            * Remove call-time pass-by-reference.
-            * Install examples in the right directory.
+            - Fix #3381, notice in Matrix::fillTable().
+            - Fix #3382, warning in Filler::factory().
         ]]></notes>
         <filelist>
             <dir name="/" baseinstalldir="HTML/Table">
@@ -53,6 +53,31 @@
     </release>
     
     <changelog>
+        <release>
+            <version>1.0.6</version>
+            <date>2004-08-07</date>
+            <state>stable</state>
+            <license>PHP License v3.0</license>
+            <notes><![CDATA[
+                * Remove call-time pass-by-reference.
+                * Install examples in the right directory.
+            ]]></notes>
+            <filelist>
+                <dir name="/" baseinstalldir="HTML/Table">
+                    <file role="php">Matrix.php</file>
+                    <dir name="Matrix">
+                        <file role="php">Filler.php</file>
+                        <dir name="Filler">
+                            <file role="php">LRTB.php</file>
+                            <file role="php">RLTB.php</file>
+                        </dir>
+                    </dir>
+                </dir>
+                <dir name="examples" baseinstalldir="doc/HTML_Table_Matrix">
+                    <file role="php">HTML_Table_Matrix_example.php</file>
+                </dir>
+            </filelist>
+        </release>
         <release>
             <version>1.0.5</version>
             <date>2004-06-15</date>

@@ -73,7 +73,7 @@ class HTML_Table_Matrix_Filler {
      * @param array $options Filler options
      * @return mixed Filler instance on success, PEAR_Error otherwise
      */
-    function &factory($type, &$matrix, $options = false)
+    function &factory($type, &$matrix, $options = array())
     {
         $class = 'HTML_Table_Matrix_Filler_'.$type;
         $file = str_replace('_', '/', $class).'.php';
@@ -91,7 +91,7 @@ class HTML_Table_Matrix_Filler {
      * @param array $options Options to set
      * @return void
      */
-    function setOptions($options = false) {
+    function setOptions($options = array()) {
         $opts = array_merge($this->_defaultOptions, $options);
         $this->options = $opts;
     }

@@ -81,7 +81,7 @@ class HTML_Table_Matrix_Filler {
         if (!class_exists($class)) {
             return PEAR::raiseError("Filler \"$type\" does not exist.");
         }
-        $instance = new $class($matrix, $options);
+        $instance = new $class(&$matrix, $options);
         return $instance;
     }
     

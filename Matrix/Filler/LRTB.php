@@ -38,7 +38,7 @@ class HTML_Table_Matrix_Filler_LRTB extends HTML_Table_Matrix_Filler {
      */
     function HTML_Table_Matrix_Filler_LRTB(&$matrix, $options = false) {
         $this->setOptions($options);
-        $this->matrix = $matrix;
+        $this->matrix = &$matrix;
     }
 
     /**

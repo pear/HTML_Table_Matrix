@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="1.0">
+    <name>HTML_Table_Matrix</name>
+    <summary>Autofill a table with data</summary>
+    <description>Test</description>
+    <maintainers>
+        <maintainer>
+            <user>ieure</user>
+            <name>Ian Eure</name>
+            <email>ieure@php.net</email>
+            <role>lead</role>
+        </maintainer>
+    </maintainers>
+
+    <release>
+        <version>1.0.2</version>
+        <date>2004-04-19</date>
+        <state>stable</state>
+        <license>PHP License v3.0</license>
+        <notes><![CDATA[
+            * Add a simple usage example in the Matrix.php docblock.
+        ]]></notes>
+        <filelist>
+            <dir name="/" baseinstalldir="HTML/Table">
+                <file role="php">Matrix.php</file>
+                <dir name="Matrix">
+                    <file role="php">Filler.php</file>
+                    <dir name="Filler">
+                        <file role="php">LRTB.php</file>
+                        <file role="php">RLTB.php</file>
+                    </dir>
+                </dir>
+            </dir>
+            <dir name="examples">
+                <file role="php">HTML_Table_Matrix_example.php</file>
+            </dir>
+        </filelist>
+    </release>
+    
+    <changelog>
+        <release>
+            <version>1.0.1</version>
+            <date>2004-03-26</date>
+            <state>stable</state>
+            <license>PHP License v3.0</license>
+            <notes><![CDATA[
+                * Don't pass arguments by reference.
+            ]]></notes>
+            <filelist>
+                <dir name="/" baseinstalldir="HTML/Table">
+                    <file role="php">Matrix.php</file>
+                    <dir name="Matrix">
+                        <file role="php">Filler.php</file>
+                        <dir name="Filler">
+                            <file role="php">LRTB.php</file>
+                            <file role="php">RLTB.php</file>
+                        </dir>
+                    </dir>
+                </dir>
+                <dir name="examples">
+                    <file role="php">HTML_Table_Matrix_example.php</file>
+                </dir>
+            </filelist>
+        </release>
+        <release>
+            <version>1.0</version>
+            <date>2004-03-24</date>
+            <state>stable</state>
+            <license>PHP License v3.0</license>
+            <notes><![CDATA[
+                * Create Filler classes, which are responsible for determining which cell to fill. This allows for much greater flexibility, as any number of custom methods can be created to fill top-to-bottom, diagonally, randomly, or however you wish.
+            ]]></notes>
+            <filelist>
+                <dir name="/" baseinstalldir="HTML/Table">
+                    <file role="php">Matrix.php</file>
+                    <dir name="Matrix">
+                        <file role="php">Filler.php</file>
+                        <dir name="Filler">
+                            <file role="php">LRTB.php</file>
+                            <file role="php">RLTB.php</file>
+                        </dir>
+                    </dir>
+                </dir>
+                <dir name="examples">
+                    <file role="php">HTML_Table_Matrix_example.php</file>
+                </dir>
+            </filelist>
+        </release>
+        <release>
+            <version>0.9.2</version>
+            <date>2004-01-05</date>
+            <state>stable</state>
+            <license>PHP License v2.02</license>
+            <notes>Initial PEARification.</notes>
+            <filelist>
+                <dir name="/" baseinstalldir="HTML/Table">
+                    <file role="php">Matrix.php</file>
+                </dir>
+                <dir name="examples">
+                    <file role="php">HTML_Table_Matrix_example.php</file>
+                </dir>
+            </filelist>
+        </release>
+    </changelog>
+
+    <deps>
+        <dep type="pkg" rel="has" optional="no">HTML_Table</dep>
+        <dep type="pkg" rel="has" optional="yes">Numbers_Words</dep>
+    </deps>
+</package>

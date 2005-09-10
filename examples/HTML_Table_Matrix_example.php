@@ -27,13 +27,26 @@ $m = new HTML_Table_Matrix(array('border' => 1));
 for($i = 5; $i <= 20; $i +=5) {
     $nSel[$i] = $i;
 }
+$nSel[100] = 100;
 
 for($i = 0; $i <= 20; $i ++) {
     $sel[$i] = $i;
 }
 
-$fm['RLTB'] = 'Right to left, top to bottom';
-$fm['LRTB'] = 'Left to right, top to bottom';
+$fm = array(
+    'RLTB'  => 'Right to left, top to bottom',
+    'RLBT'  => 'Right to left, bottom to top',
+    'LRTB'  => 'Left to right, top to bottom',
+    'LRBT'  => 'Left to right, bottom to top',
+    'TBLR'  => 'Top to bottom, left to right',
+    'TBRL'  => 'Top to bottom, right to left',
+    'BTLR'  => 'Bottom to top, left to right',
+    'BTRL'  => 'Bottom to top, right to left',
+    'InC'   => 'Inwards, clockwise',
+    'InCC'  => 'Inwards, counter-clockwise',
+    'OutC'  => 'Outwards, clockwise',
+    'OutCC' => 'Outwards, counter-clockwise'
+);
 
 $def['number'] = 5;
 $def['cols'] = 5;

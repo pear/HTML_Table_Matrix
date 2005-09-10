@@ -65,6 +65,13 @@ class HTML_Table_Matrix_Filler {
     var $col = 0;
 
     /**
+     * Callback function applied to _data
+     *
+     * @type mixed
+     */
+    var $callback;
+
+    /**
      * Create an instance of a Filler
      *
      * @param string $type Type of filler to instantiate

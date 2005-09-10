@@ -236,10 +236,17 @@ class HTML_Table_Matrix extends HTML_Table {
         $this->_calculateSize();
         reset($this->_data);
         $size = $this->_getTableSize();
-        for($i = $index = 0; $i < $size; $i++) {
+        $this->_data = array_slice($this->_data, 0, $size);
+        if (isset($this->_filler->callback)) {
+            if (!is_callable($this->_filler->callback)
+                || !is_array($cr = call_user_func($this->_filler->callback, $this->_data))) {
+                return PEAR::raiseError("Invalid filler callback.");
+            }
+            $this->_data = $cr;
+        }
+        for ($i = $index = 0; $i < $size; $i++, $index++) {
             list($row, $col) = $this->_filler->next($index);
             $this->_fillCell($row, $col);
-            $index++;
         }
 
         $this->_isFilled = TRUE;

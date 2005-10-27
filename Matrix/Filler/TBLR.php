@@ -54,7 +54,7 @@ class HTML_Table_Matrix_Filler_TBLR extends HTML_Table_Matrix_Filler {
             $this->col = $this->matrix->_fillStartCol;
         } else {
             $this->row = ($this->row == $this->matrix->_rows) ? $this->matrix->_fillStartRow : $this->row + 1;
-            $this->col = ($this->row == $this->matrix->_fillStartRow) ? $this->col + 1;
+            $this->col = ($this->row == $this->matrix->_fillStartRow) ? $this->col + 1 : $this->col;
         }
 
         return array($this->row, $this->col);

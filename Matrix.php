@@ -1,22 +1,27 @@
 <?php
-/* vim: set expandtab tabstop=4 shiftwidth=4: */
-// +----------------------------------------------------------------------+
-// | PHP version 4                                                        |
-// +----------------------------------------------------------------------+
-// | Copyright (c) 1997-2002 The PHP Group                                |
-// +----------------------------------------------------------------------+
-// | This source file is subject to version 3.0 of the PHP license,       |
-// | that is bundled with this package in the file LICENSE, and is        |
-// | available at through the world-wide-web at                           |
-// | http://www.php.net/license/3_0.txt.                                  |
-// | If you did not receive a copy of the PHP license and are unable to   |
-// | obtain it through the world-wide-web, please send a note to          |
-// | license@php.net so we can mail you a copy immediately.               |
-// +----------------------------------------------------------------------+
-// | Authors: Ian Eure <ieure@php.net>                                    |
-// +----------------------------------------------------------------------+
-//
-// $Id$
+
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
+
+/**
+ * Main HTML_Table_Matrix class
+ *
+ * PHP versions 4 and 5
+ *
+ * LICENSE: This source file is subject to version 3.0 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.php.net/license/3_0.txt.  If you did not receive a copy of
+ * the PHP License and are unable to obtain it through the web, please
+ * send a note to license@php.net so we can mail you a copy immediately.
+ *
+ * @package    HTML_Table_Matrix
+ * @author     Ian Eure <ieure@php.net>
+ * @version    Release: @package_version@
+ * @version    CVS:     $Revision$
+ * @copyright  (c) 2003-2005 Ian Eure
+ * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
+ * @link       http://pear.php.net/package/html_table_matrix/
+ * @see        HTML_Table
+ */
 
 require_once 'PEAR.php';
 require_once 'HTML/Table.php';
@@ -39,16 +44,20 @@ require_once 'HTML/Table/Matrix/Filler.php';
  * $m->setTableSize(2, 5);
  * // Output the table.
  * print $m->toHtml();
- * 
  *
- * @package HTML_Table_Matrix
- * @author Ian Eure <ieure@php.net>
- * @version 1.0.2
- * @link http://atomized.org/PEAR/
+ *
+ * @package    HTML_Table_Matrix
+ * @category   HTML
+ * @author     Ian Eure <ieure@php.net>
+ * @version    Release: @package_version@
+ * @version    CVS:     $Revision$
+ * @copyright  (c) 2003-2005 Ian Eure
+ * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
+ * @link       http://pear.php.net/package/html_table_matrix/
+ * @see        HTML_Table
  */
 class HTML_Table_Matrix extends HTML_Table {
 
-    // {{{ properties
     /**
      * The filler
      *
@@ -112,10 +121,8 @@ class HTML_Table_Matrix extends HTML_Table {
      * @see setData()
      */
     var $_data = array();
-    // }}}
 
 
-    // {{{ setData()
     /**
      * Sets data to fill table with.
      *
@@ -126,9 +133,7 @@ class HTML_Table_Matrix extends HTML_Table {
     {
         $this->_data = $data;
     }
-    // }}}
 
-    // {{{ setFillStart()
     /**
      * Set the row & column to start filling at.
      *
@@ -146,9 +151,7 @@ class HTML_Table_Matrix extends HTML_Table {
         $this->_fillStartRow = $row;
         $this->_fillStartCol = $col;
     }
-    // }}}
 
-    // {{{ setTableSize()
     /**
      * Set the size of the resulting table.
      *
@@ -166,7 +169,6 @@ class HTML_Table_Matrix extends HTML_Table {
         $this->_rows = $rows;
         $this->_cols = $cols;
     }
-    // }}}
 
     /**
      * Return the total table size (w * h)
@@ -181,7 +183,7 @@ class HTML_Table_Matrix extends HTML_Table {
         }
         return $this->_rows * $this->_cols;
     }
-    
+
     /**
      * Accept a Filler
      */
@@ -194,7 +196,6 @@ class HTML_Table_Matrix extends HTML_Table {
         return true;
     }
 
-    // {{{ _calculateSize()
     /**
      * Calculates the size of the table based on the data provided.
      *
@@ -213,20 +214,18 @@ class HTML_Table_Matrix extends HTML_Table {
             $this->_cols = ceil($n / $this->_rows);
         }
     }
-    // }}}
 
-    // {{{ fillTable()
     /**
-    * Fills table with provided data. RL & BT modes are not implemented yet.
-    *
-    * This function does the actual laying out of the data into the table.
-    * It isn't necessary to call this unless you want to add or change something
-    * in the table, as toHtml() calls this automatically if the table has not
-    * yet been filled with data.
-    *
-    * @return mixed boolean true on success, PEAR_Error otherwise
-    * @see setData()
-    */
+     * Fills table with provided data. RL & BT modes are not implemented yet.
+     *
+     * This function does the actual laying out of the data into the table.
+     * It isn't necessary to call this unless you want to add or change something
+     * in the table, as toHtml() calls this automatically if the table has not
+     * yet been filled with data.
+     *
+     * @return mixed boolean true on success, PEAR_Error otherwise
+     * @see setData()
+     */
     function fillTable()
     {
         if (!HTML_Table_Matrix_Filler::isValid($this->_filler)) {
@@ -252,9 +251,7 @@ class HTML_Table_Matrix extends HTML_Table {
         $this->_isFilled = TRUE;
         return true;
     }
-    // }}}
 
-    // {{{ _fillCell()
     /**
      * Fills a cell with data.
      *
@@ -270,10 +267,7 @@ class HTML_Table_Matrix extends HTML_Table {
         list($null, $data) = each($this->_data);
         $this->setCellContents($row, $col, $data);
     }
-    // }}}
 
-
-    // {{{ toHtml()
     /**
      * Returns HTML table. Calls fillTable() if the table has not already
      * been filled.
@@ -289,6 +283,5 @@ class HTML_Table_Matrix extends HTML_Table {
 
         return(parent::toHtml());
     }
-    // }}}
 }
 ?>

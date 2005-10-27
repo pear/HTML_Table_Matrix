@@ -27,6 +27,43 @@
     </maintainers>
 
     <release>
+        <version>1.0.9</version>
+        <date>2005-10-26</date>
+        <state>stable</state>
+        <license>PHP License v3.0</license>
+        <notes><![CDATA[
+            - Fix bug in TBLR filler. Thanks to David FitzGerald for finding this.
+        ]]></notes>
+        <filelist>
+            <dir name="/" baseinstalldir="HTML/Table">
+                <file role="php">Matrix.php</file>
+                <dir name="Matrix">
+                    <file role="php">Filler.php</file>
+                    <dir name="Filler">
+		        <file role="php">BTLR.php</file>
+			<file role="php">BTRL.php</file>
+			<file role="php">InC.php</file>
+			<file role="php">InCC.php</file>
+			<file role="php">LRBT.php</file>
+                        <file role="php">LRTB.php</file>
+			<file role="php">OutC.php</file>
+			<file role="php">OutCC.php</file>
+			<file role="php">RLBT.php</file>
+                        <file role="php">RLTB.php</file>
+			<file role="php">Random.php</file>
+			<file role="php">TBLR.php</file>
+			<file role="php">TBRL.php</file>
+                    </dir>
+                </dir>
+            </dir>
+            <dir name="examples" baseinstalldir="doc/HTML_Table_Matrix">
+                <file role="php">HTML_Table_Matrix_example.php</file>
+            </dir>
+        </filelist>
+    </release>
+    
+    <changelog>
+    <release>
         <version>1.0.8</version>
         <date>2005-09-10</date>
         <state>stable</state>
@@ -62,8 +99,6 @@
             </dir>
         </filelist>
     </release>
-    
-    <changelog>
         <release>
             <version>1.0.7</version>
             <date>2005-02-07</date>

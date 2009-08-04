@@ -34,10 +34,9 @@ Features:
  </lead>
 
  <date>2009-08-04</date>
- <time>21:51:59</time>
 
  <version>
-  <release>1.0.9</release>
+  <release>1.0.10</release>
   <api>1.0.9</api>
  </version>
  <stability>
@@ -48,7 +47,9 @@ Features:
  <license>PHP License v3.0</license>
 
  <notes>
-- Fix bug in TBLR filler. Thanks to David FitzGerald for finding this.
+QA release:
+- Convert to package.xml v2
+- Fix bug #14204: Wrong code in usage example [cweiske]
  </notes>
 
  <contents>
@@ -106,6 +107,23 @@ Features:
  <phprelease />
 
  <changelog>
+
+  <release>
+   <version>
+    <release>1.0.9</release>
+    <api>1.0.9</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2005-10-27</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Fix bug in TBLR filler. Thanks to David FitzGerald for finding this.    
+   </notes>
+  </release>
+
   <release>
    <version>
     <release>1.0.8</release>

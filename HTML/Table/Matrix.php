@@ -35,10 +35,10 @@ require_once 'HTML/Table/Matrix/Filler.php';
  * // This is the data to put in the table.
  * $data = array('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
  *               'nine', 'ten');
- * $m = &new HTML_Table_Matrix;
+ * $m = &new HTML_Table_Matrix();
  * $m->setData($data);
  * // Pick a filler class. We use the stock left-to-right-top-to-bottom here.
- * $f = &HTML_Table_Matrix_Filler::factory('LRTB');
+ * $f = &HTML_Table_Matrix_Filler::factory('LRTB', $m);
  * $m->accept($f);
  * // Make the table 2 rows deep by 5 cols wide
  * $m->setTableSize(2, 5);

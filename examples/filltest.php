@@ -1,12 +1,5 @@
-<?
-/*
-$base = '/home/ieure/Projects/Current/MyPear/HTML_Table_Matrix';
-
-require $base.'/Filler/LRTB.php';
-*/
-
+<?php
 require_once 'Numbers/Words.php';
-require_once '//home/ieure/Projects/Current/madzap/include/compat.inc.php';
 require_once 'HTML/Table/Matrix.php';
 
 PEAR::setErrorHandling(PEAR_ERROR_DIE);

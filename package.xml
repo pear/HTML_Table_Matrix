@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package
- packagerversion="1.8.2"
  version="2.0"
  xmlns="http://pear.php.net/dtd/package-2.0"
  xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
@@ -51,6 +50,7 @@ QA release:
 - Convert to package.xml v2
 - Fix bug #14204: Wrong code in usage example [cweiske]
 - Fix bug #14676: Security issue due to seeding random number generator [cweiske]
+- Fix example
  </notes>
 
  <contents>
@@ -108,6 +108,26 @@ QA release:
  <phprelease />
 
  <changelog>
+
+  <release>
+   <version>
+    <release>1.0.10</release>
+    <api>1.0.9</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-08-04</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+QA release:
+- Convert to package.xml v2
+- Fix bug #14204: Wrong code in usage example [cweiske]
+- Fix bug #14676: Security issue due to seeding random number generator [cweiske]
+- Fix example
+   </notes>
+  </release>
 
   <release>
    <version>

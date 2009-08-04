@@ -50,6 +50,7 @@ Features:
 QA release:
 - Convert to package.xml v2
 - Fix bug #14204: Wrong code in usage example [cweiske]
+- Fix bug #14676: Security issue due to seeding random number generator [cweiske]
  </notes>
 
  <contents>
@@ -86,7 +87,7 @@ QA release:
  <dependencies>
   <required>
    <php>
-    <min>4.0.0</min>
+    <min>4.2.0</min>
    </php>
    <pearinstaller>
     <min>1.4.0b1</min>

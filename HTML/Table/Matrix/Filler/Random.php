@@ -39,7 +39,6 @@ class HTML_Table_Matrix_Filler_Random extends HTML_Table_Matrix_Filler {
     function HTML_Table_Matrix_Filler_Random(&$matrix, $options = false) {
         $this->setOptions($options);
         $this->matrix = &$matrix;
-        srand(microtime());
     }
     
     function _initMap()

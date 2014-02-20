@@ -1,0 +1,35 @@
+{
+    "authors": [
+        {
+            "email": "ieure@php.net",
+            "name": "Ian Eure",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "HTML": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/HTML_Table_Matrix",
+    "include-path": [
+        "./"
+    ],
+    "license": "PHP License v3.0",
+    "name": "pear/html_table_matrix",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=HTML_Table_Matrix",
+        "source": "https://github.com/pear/HTML_Table_Matrix"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*",
+        "pear/html_table": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "suggest": {
+        "pear/numbers_words": "Install optionally via your project's composer.json"
+    }
+}
